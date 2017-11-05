@@ -59,4 +59,5 @@ def create_loading_bar(percentage, width):
         print("-", end='')
     print("|", end='')
 
+
 create_loading_bar(90, 18)
