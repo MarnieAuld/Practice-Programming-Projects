@@ -88,16 +88,61 @@ of this number until the square root is less than 2.
 Print the value each time the square root is taken, 
 along with the number of times the operation has been completed (USE STRING FORMATTING)
 """
-from math import sqrt
+# from math import sqrt
+#
+# user_integer = int(input("Input an integer: "))
+# while user_integer < 2:
+#     print("Error - Integer must be more than 2")
+#     user_integer = int(input("Input an integer: "))
+# operation_count = 1
+# square_root = sqrt(user_integer)
+# print("{}: {:.3f}".format(operation_count, square_root))
+# while not square_root < 2:
+#     operation_count += 1
+#     square_root = sqrt(square_root)
+#     print("{}: {:.3f}".format(operation_count, square_root))
 
-user_integer = int(input("Input an integer: "))
-while user_integer < 2:
-    print("Error - Integer must be more than 2")
-    user_integer = int(input("Input an integer: "))
-operation_count = 1
-square_root = sqrt(user_integer)
-print("{}: {:.3f}".format(operation_count, square_root))
-while not square_root < 2:
-    operation_count += 1
-    square_root = sqrt(square_root)
-    print("{}: {:.3f}".format(operation_count, square_root))
+"""
+Write a program that allows you to play rock, paper, scissors vs the computer.
+Import the random module to select the computer's choice.
+"""
+from random import randint
+
+user_play = input("Enter your choice: Rock, Paper, Scissors \n>>> ").lower()
+computer_play = randint(0,2)
+if user_play == "rock":
+    print("You chose Rock")
+    if computer_play == 0:
+        print("Computer chose Rock")
+        print("TIE")
+    elif computer_play == 1:
+        print("Computer chose Paper")
+        print("YOU LOSE")
+    else:
+        print("Computer chose Scissors")
+        print("YOU WIN")
+elif user_play == "paper":
+    print("You chose Paper")
+    if computer_play == 0:
+        print("Computer chose Rock")
+        print("YOU WIN")
+    elif computer_play == 1:
+        print("Computer chose Paper")
+        print("TIE")
+    else:
+        print("Computer chose Scissors")
+        print("YOU LOSE")
+else:
+    print("You chose Scissors")
+    if computer_play == 0:
+        print("Computer chose Rock")
+        print("YOU LOSE")
+    elif computer_play == 1:
+        print("Computer chose Paper")
+        print("YOU WIN")
+    else:
+        print("Computer chose Scissors")
+        print("TIE")
+
+
+
